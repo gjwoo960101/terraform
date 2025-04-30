@@ -1,0 +1,11 @@
+services:
+  terraform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: terraform-dev
+    volumes:
+      - ..:${containerWorkspaceFolder}:cached
+    tty: true
+    
+    

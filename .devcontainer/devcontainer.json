@@ -1,0 +1,20 @@
+{
+    // Basic
+    "name": "Terrafrom DevContainer",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "terraform",
+    "workspaceFolder": "/home/vscode/${localWorkspaceFolderBasename}",
+    // Featuring
+    "features": {
+      "ghcr.io/devcontainers/features/terraform:1":{}
+    },
+    // Custom
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "hashicorp.terraform"
+        ]
+      }
+    },
+    "initializeCommand": "bash ./.devcontainer/commands/initializeCommand.sh ${localWorkspaceFolder} ${containerWorkspaceFolder} ${localWorkspaceFolderBasename} ${containerWorkspaceFolderBasename}"
+  }
