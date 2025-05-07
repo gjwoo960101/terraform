@@ -33,6 +33,7 @@ resource "local_file" "write_pet_name" {
   filename = "${path.module}/pet_name.txt"
 }
 
+
 resource "null_resource" "log_output" {
   provisioner "local-exec" {
     command = "echo 'Your random pet name is: ${random_pet.pet_name.id}'"
@@ -42,3 +43,4 @@ resource "null_resource" "log_output" {
     pet_name = random_pet.pet_name.id
   }
 }
+
